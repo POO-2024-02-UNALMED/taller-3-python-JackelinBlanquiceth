@@ -1,12 +1,10 @@
 class Marca:
-    def __init__(self, nombre:str):
+    def __init__(self, nombre):
         self._nombre = nombre
 
     def getNombre(self):
-        if self._nombre:
-         self._nombre = str
+        return self._nombre
 
-    def setNombre(self, nombre:str):
-        if self._nombre:
+    def setNombre(self, nombre):
          self._nombre = nombre
  

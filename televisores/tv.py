@@ -1,14 +1,13 @@
-from televisores.marca import Marca
 class TV:
-    _numTV = 0
-    def __init__(self, marca: Marca, estado:bool):
+    numTV = 0
+    def __init__(self, marca, estado):
         self._marca = marca
         self._canal = 1
         self._precio = 500
         self._estado = estado
         self._volumen = 1
         self._control = None
-        TV._numTV += 1
+        TV.numTV += 1
 
     def getMarca(self):
         return self._marca
@@ -28,30 +27,30 @@ class TV:
     def getEstado(self):
         return self._estado
     
-    def setMarca(self, marca: Marca):
+    def setMarca(self, marca):
         self._marca = marca 
 
-    def setCanal(self, canal: int):
-        if self._canal==True and 120>=canal>=1:
+    def setCanal(self, canal):
+        if self._estado ==True and 120>=canal>=1:
           self._canal = canal
 
-    def setPrecio(self, precio: int):
+    def setPrecio(self, precio):
         self._precio = precio  
     
-    def setVolumen(self, volumen: int):
-        if self._canal==True and 7>=volumen>=0:
+    def setVolumen(self, volumen):
+        if self._estado==True and 7>=volumen>=0:
          self._volumen = volumen 
     
-    def setControl(self, control: Control):
+    def setControl(self, control):
         self._control = control 
     
     @classmethod
     def getNumTV(cls):
-        return cls._numTV
+        return cls.numTV
     
     @classmethod
     def setNumTV(cls, numTV: int):
-        cls._numTV = numTV
+        cls.numTV = numTV
 
     def turnOn(self):
         self._estado = True
@@ -60,7 +59,17 @@ class TV:
         self._estado = False
 
     def canalUp(self):
+       if 120>self._canal>=1 and self._estado == True:
         self._canal += 1
 
     def canalDown(self):
+       if 120>=self._canal>1 and self._estado == True: 
         self._canal -= 1
+
+    def volumenUp(self):
+       if 7>self._volumen>=0 and self._estado == True:
+          self._volumen += 1
+
+    def volumenDown(self):
+       if 7>=self._volumen>0 and self._estado == True:
+          self._volumen -= 1      
