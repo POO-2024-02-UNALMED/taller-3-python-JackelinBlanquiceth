@@ -1,4 +1,4 @@
-from __future__ import annotations
+
 
 class Control:
     def __init__(self) -> None:
