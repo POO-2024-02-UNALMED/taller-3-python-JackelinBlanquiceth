@@ -27,10 +27,10 @@ class Control:
     def setVolumen(self, volumen:int):
         self._tv.setVolumen(volumen)
 
-    def getTV(self):
+    def getTv(self):
         return self._tv
     
-    def setTV(self, tv:TV):
+    def setTv(self, tv:TV):
         self._tv = tv
     
     def enlazar(self):
