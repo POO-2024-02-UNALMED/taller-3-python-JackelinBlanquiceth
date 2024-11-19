@@ -1,5 +1,4 @@
-from televisores.control import Control
-from televisores.marca import Marca
+from __future__ import annotations
 class TV:
     _numTV = 0
     def __init__(self, marca: Marca, estado:bool):
