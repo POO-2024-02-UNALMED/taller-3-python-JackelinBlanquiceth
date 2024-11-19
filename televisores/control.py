@@ -1,8 +1,7 @@
-from tv import TV
-
 class Control:
     def __init__(self):
         self._tv = None
+        pass
     
     def enlazar(self, tv):
         self._tv = tv 
